@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Ubermelon Order Form</title>
+	</head>
+	<body>
+		<h1>Order!</h1>
+		<h3>Prices</h3>
+		<table>
+			<tr>
+				<th>Melon Name</th>
+				<th>Price per lb.</th>
+			</tr>
+			<tr>
+				<td>Watermelon</td>
+				<td>$1.59</td>
+			</tr>
+			<tr>
+				<td>Honeydew</td>
+				<td>$.99</td>
+			</tr>
+			<tr>
+				<td>Canteloupe</td>
+				<td>$1.29</td>
+			</tr>
+			<tr>
+				<td>Crenshaw</td>
+				<td>$2.19</td>
+			</tr>
+			<tr>
+				<td>Canary</td>
+				<td>$11.99</td>
+			</tr>
+		</table>
+		<p>Place your orders here! You know you want to.</p>
+		
+		<form action="https://ubermelon-order-form.herokuapp.com/process" method="GET">
+			<div>First Name: <input type="text" name="firstname"></div>
+			Last Name: <input type="text" name="lastname"><br>
+			Melon Type:
+				<select name="melontype">
+					<option value="Watermelon">Watermelon</option>
+					<option value="Honeydew">Honeydew</option>
+					<option value="Canteloupe">Canteloupe</option>
+					<option value="Crenshaw">Crenshaw</option>
+					<option value="Canary">Canary</option>
+				</select>
+			<br>
+			Quantity*: <input type="text" name="quantity"><br>
+			Delivery Time:
+				<input type="radio" name="delivery-time" value="12amto12pm">12:00am to 12:00pm
+				<input type="radio" name="delivery-time" value="12pmto12am">12:00pm to 12:00am
+				<input type="radio" name="delivery-time" value="timeisillusion">Time is an illusion
+			<br>
+			Returning Customer?
+				<input type="radio" name="returning-customer" value="yes">Yes
+				<input type="radio" name="returning-customer" value="no">No
+			<br>
+			For Statistical Purposes:
+				<input type="checkbox" name="animal" value="dog">Dog
+				<input type="checkbox" name="animal" value="cat">Cat
+				<input type="checkbox" name="animal" value="hedgehog">Hedgehog
+				<input type="checkbox" name="animal" value="balloonicorn">Balloonicorn
+				<input type="checkbox" name="animal" value="yak">Yak
+			<br>
+			Special Instructions:
+				<div>
+					<textarea name="special-instructions"></textarea>
+				</div>
+			<br>
+			<input type="submit">
+			
+
+		</form>
+
+		<footer>
+			*Quantities given are by the flat.
+		</footer>
+	</body>
+
+</html>
